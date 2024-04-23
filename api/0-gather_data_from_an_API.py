@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Gather data from an API"""
 
-import sys
 import requests
-
+import sys
 
 
 def fetch_data():
