@@ -22,7 +22,7 @@ def export_data():
         for todo in todo_request:
             task = {"username": username,
                     "task": todo.get('title'),
-                    "completed": todo.get('competed')}
+                    "completed": todo.get('completed')}
             tasks.append(task)
         data[user_id] = tasks
 
