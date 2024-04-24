@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""exporting data in json format"""
+"""export data"""
 
 
 import json
@@ -7,7 +7,7 @@ import requests
 
 
 def export_data():
-    """Saving all the data to JSON file"""
+    """saving all data to json file"""
     users_route = 'https://jsonplaceholder.typicode.com/users'
     todos_route = 'https://jsonplaceholder.typicode.com/todos/?userID={}'
     users = requests.get(users_route).json()
@@ -26,7 +26,7 @@ def export_data():
             tasks.append(task)
         data[user_id] = tasks
 
-    with open('todo_all_employees.json', 'w') as file:
+    with open('todo_all_employess.json', 'w') as file:
         json.dump(data, file)
 
 
